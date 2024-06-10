@@ -1,4 +1,5 @@
 python-dotenv
+decouple
 streamlit
 anthropic
 langchain
