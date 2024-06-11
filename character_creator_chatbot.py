@@ -1,5 +1,5 @@
 import streamlit as st
-from decouple import config
+import os
 from langchain_anthropic import ChatAnthropic
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferWindowMemory
@@ -49,7 +49,7 @@ with st.sidebar:
 # Initialize the ConversationChain
 def init_conversationchain() -> ConversationChain:
 
-    ANTHROPIC_API_KEY=config('ANTHROPIC_KEY')
+    ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_KEY')
 
     CHARACTER_INFO = f"""
     The following is a conversation between a human and an AI character. The AI charcter is talkative and provides lots of specific details from its context:
