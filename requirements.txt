@@ -4,3 +4,4 @@ streamlit
 anthropic
 langchain
 langchain_anthropic
+langchain-community
